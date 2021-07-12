@@ -26,7 +26,7 @@ const result = await promise
 console.log(result)
 */
 
-function loadPlanetData() {
+function loadPlanetsData() {
   return new Promise((resolve, reject) => {
     fs.createReadStream(
       path.join(__dirname, "..", "..", "data", "kepler_data.csv")
@@ -83,6 +83,6 @@ async function savePlanet(planet) {
 }
 
 module.exports = {
-  loadPlanetData,
+  loadPlanetsData,
   getAllPlanets,
 };
